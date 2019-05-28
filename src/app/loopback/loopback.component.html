@@ -1,0 +1,23 @@
+<div class="container" style="padding: 5px">
+<p style="text-align: center; color:purple ; font-weight: bold">keyup event with hash character(#) </p>
+    
+<input  #box (keyup)="0" class="form-control">
+<p>{{box.value}}</p> 
+ 
+<input   #inputvalue (keyup)="Onkey(inputvalue.value)" class="form-control"> 
+<p>{{values}}</p>
+
+<input  #enter (keyup.enter)="OnEnterkey(enter.value)" class="form-control">
+<p>{{valuebyenter}}</p>
+
+<input  #blur (keyup.enter)="Update(blur.value)" (blur)="Update(blur.value)" class="form-control">
+<p>{{textvalue}}</p>
+
+<input  #loopvalues (keyup.enter)="loopkey(loopvalues.value)" (blur)="loopkey(loopvalues.value) ; loopvalues.value='' ">
+<button class="btn btn-success" (click)="loopkey(loopvalues.value)">Add</button>
+
+<ul *ngFor= "let value of arrayvalue">
+<li>{{value}}</li>
+</ul>
+</div>
+

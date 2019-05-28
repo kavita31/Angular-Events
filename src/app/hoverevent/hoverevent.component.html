@@ -1,0 +1,18 @@
+<div class="container" style="padding: 5px">
+    <p style="text-align: center; color:purple ; font-weight: bold">Mouseover Event </p>
+     <!-- mouseover & mouseout     -->
+    <input  (mouseover)="changetext=true" (mouseout)="changetext=false" class="form-control">
+    <p *ngIf="!changetext">Hide on mouseout</p> 
+    <p *ngIf="changetext">Show on mouseover</p>
+
+    <!-- mouseenter & mouseleave -->
+    <input (mouseenter)="mouseenter=true" (mouseleave)="mouseenter=false" class="form-control">
+    <p *ngIf="mouseenter"> Show on Mouse Enter</p> 
+    <p *ngIf="!mouseenter">Hide  on Mouse Leave</p>
+
+    <input (mouseenter)="changecolor=true" (mouseleave)="changecolor=false" class="form-control">
+    <hr>
+    <p [ngStyle]="{backgroundColor: changecolor==true ? 'green' : 'red'}">Hello {{changecolor}}</p> 
+    </div>
+    
+    
